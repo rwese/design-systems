@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -10,46 +10,97 @@
   <article class="ds-doc">
     <header class="ds-doc__header">
       <h1>Theme Variants</h1>
-      <ul class="ds-meta" aria-label="Document metadata">
+      <ul class="ds-meta">
         <li>Status: Exploration</li>
         <li>Updated: 2026-05-14</li>
       </ul>
-      <p class="ds-summary">Compare multiple visual directions for the same documentation concept before choosing one.</p>
+      <p class="ds-summary">Four console-inspired directions applied to the same documentation system, keeping structure and accessibility consistent.</p>
     </header>
 
-    <main class="ds-doc__body ds-doc__body--wide">
+    <div class="ds-doc__body ds-doc__body--wide">
       <section>
-        <h2>Summary Page</h2>
-        <div class="ds-variants">
-          <section class="ds-variant">
-            <h3>Calm</h3>
-            <p>Quiet surfaces, restrained borders, and neutral contrast for operational documents.</p>
-            <ul>
-              <li>Best for runbooks</li>
-              <li>Low visual noise</li>
-            </ul>
+        <h2>Style Directions</h2>
+        <div class="ds-theme-grid">
+          <section class="ds-theme-preview ds-theme--console-light" aria-labelledby="theme-light">
+            <article class="ds-doc">
+              <header class="ds-doc__header">
+                <h1 id="theme-light">Light</h1>
+                <ul class="ds-meta">
+                  <li>Geist</li>
+                  <li>Docs</li>
+                </ul>
+                <p class="ds-summary">Bright surfaces, precise borders, and developer-product clarity.</p>
+              </header>
+              <div class="ds-doc__body">
+                <h2>Deployment Note</h2>
+                <p>Use for changelogs, handbooks, and public technical documentation.</p>
+                <div class="ds-callout ds-callout--info">
+                  <p>High readability without giving up product polish.</p>
+                </div>
+              </div>
+            </article>
           </section>
 
-          <section class="ds-variant">
-            <h3>Editorial</h3>
-            <p>Larger type and stronger section rhythm for narrative reports and review documents.</p>
-            <ul>
-              <li>Best for updates</li>
-              <li>More expressive hierarchy</li>
-            </ul>
+          <section class="ds-theme-preview ds-theme--console-dark" aria-labelledby="theme-dark">
+            <article class="ds-doc">
+              <header class="ds-doc__header">
+                <h1 id="theme-dark">Dark</h1>
+                <ul class="ds-meta">
+                  <li>Raycast</li>
+                  <li>Ops reports</li>
+                </ul>
+                <p class="ds-summary">Dark chrome, bright links, and crisp borders for technical status pages.</p>
+              </header>
+              <div class="ds-doc__body">
+                <h2>Incident Log</h2>
+                <p>Good for dashboards, postmortems, and command-heavy documentation.</p>
+                <pre><code>status: monitored</code></pre>
+              </div>
+            </article>
           </section>
 
-          <section class="ds-variant">
-            <h3>Dense</h3>
-            <p>Compact spacing and tighter blocks for facts, decisions, and side-by-side comparison.</p>
-            <ul>
-              <li>Best for references</li>
-              <li>Fast scanning</li>
-            </ul>
+          <section class="ds-theme-preview ds-theme--console-dimmed" aria-labelledby="theme-dimmed">
+            <article class="ds-doc">
+              <header class="ds-doc__header">
+                <h1 id="theme-dimmed">Dimmed</h1>
+                <ul class="ds-meta">
+                  <li>Primer</li>
+                  <li>Long reads</li>
+                </ul>
+                <p class="ds-summary">Softer dark values for review sessions, dashboards, and lower-glare docs.</p>
+              </header>
+              <div class="ds-doc__body">
+                <h2>Review Queue</h2>
+                <p>Useful when the page needs dark mode comfort with less contrast pressure.</p>
+                <div class="ds-callout ds-callout--info">
+                  <p>Muted surfaces still preserve clear boundaries.</p>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="ds-theme-preview ds-theme--console-paper" aria-labelledby="theme-paper">
+            <article class="ds-doc">
+              <header class="ds-doc__header">
+                <h1 id="theme-paper">Paper</h1>
+                <ul class="ds-meta">
+                  <li>Post-it</li>
+                  <li>Notes</li>
+                </ul>
+                <p class="ds-summary">Warm paper, compact edges, and sticky-note emphasis for decision notes.</p>
+              </header>
+              <div class="ds-doc__body">
+                <h2>Decision Memo</h2>
+                <p>Good for lightweight RFCs, meeting outcomes, and annotated implementation notes.</p>
+                <div class="ds-callout ds-callout--warning">
+                  <p>More expressive, best used for focused documents.</p>
+                </div>
+              </div>
+            </article>
           </section>
         </div>
       </section>
-    </main>
+    </div>
   </article>
 </body>
 </html>

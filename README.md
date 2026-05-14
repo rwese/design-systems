@@ -18,7 +18,7 @@ Lean CSS for concise, handwritten single-page HTML documentation.
 ## Minimal page
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -30,7 +30,7 @@ Lean CSS for concise, handwritten single-page HTML documentation.
   <article class="ds-doc">
     <header class="ds-doc__header">
       <h1>Document title</h1>
-      <ul class="ds-meta" aria-label="Document metadata">
+      <ul class="ds-meta">
         <li>Status: Draft</li>
         <li>Owner: Team</li>
       </ul>
@@ -43,12 +43,12 @@ Lean CSS for concise, handwritten single-page HTML documentation.
       </nav>
     </header>
 
-    <main class="ds-doc__body">
+    <div class="ds-doc__body">
       <section id="section">
         <h2>Section</h2>
         <p>Write semantic HTML and use documentation patterns only where useful.</p>
       </section>
-    </main>
+    </div>
 
     <footer class="ds-doc__footer">
       <p>Footer note.</p>
@@ -79,5 +79,7 @@ V1 supports:
 - `ds-callout ds-callout--info` - neutral context
 - `ds-callout ds-callout--warning` - risks and caveats
 - `ds-variants` and `ds-variant` - responsive side-by-side concept comparisons
+- `ds-theme--core`, `ds-theme--console-light`, `ds-theme--console-dark`, `ds-theme--console-dimmed`, `ds-theme--console-paper` - complete theme directions applied to any document shell
+- `ds-theme-grid`, `ds-theme-preview` - compact theme comparison layout
 
 The stylesheet also defines readable defaults for headings, paragraphs, links, lists, blockquotes, inline `code`, `kbd`, `pre code`, tables, captions, keyboard focus, mobile layouts, and basic print output.
