@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design System CDN Demo</title>
+  <link rel="stylesheet" href="design-system-cdn.css">
+</head>
+<body>
+  <section class="ds-section" id="buttons">
+    <h2>Buttons</h2>
+    <button class="ds-button ds-button--primary">Primary</button>
+    <button class="ds-button ds-button--secondary">Secondary</button>
+    <button class="ds-button ds-button--danger">Delete</button>
+  </section>
+
+  <section class="ds-section" id="forms">
+    <h2>Form elements</h2>
+    <div class="ds-field">
+      <label for="name">Name</label>
+      <input class="ds-field__control" id="name" type="text" placeholder="Enter your name">
+    </div>
+
+    <div class="ds-field ds-field--invalid">
+      <label for="email">Email</label>
+      <input class="ds-field__control" id="email" type="email" value="invalid-email" aria-invalid="true">
+    </div>
+  </section>
+
+  <section class="ds-section" id="media">
+    <h2>Images and media</h2>
+    <div class="ds-media-object">
+      <img src="https://placehold.co/72x72" alt="Avatar">
+      <div>
+        <h3>Project title</h3>
+        <p>Short supporting description for the project.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
