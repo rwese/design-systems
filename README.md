@@ -81,5 +81,6 @@ V1 supports:
 - `ds-variants` and `ds-variant` - responsive side-by-side concept comparisons
 - `ds-theme--core`, `ds-theme--console-light`, `ds-theme--console-dark`, `ds-theme--console-dimmed`, `ds-theme--console-paper` - complete theme directions applied to any document shell
 - `ds-theme-grid`, `ds-theme-preview` - compact theme comparison layout
+- `ds-theme-stage`, `ds-theme-switch`, `ds-theme-target` - CSS-driven theme switcher preview
 
 The stylesheet also defines readable defaults for headings, paragraphs, links, lists, blockquotes, inline `code`, `kbd`, `pre code`, tables, captions, keyboard focus, mobile layouts, and basic print output.

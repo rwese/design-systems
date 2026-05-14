@@ -18,6 +18,52 @@
     </header>
 
     <div class="ds-doc__body ds-doc__body--wide">
+      <section class="ds-theme-stage" aria-labelledby="theme-switch-title">
+        <h2 id="theme-switch-title">Theme Switcher</h2>
+        <fieldset class="ds-theme-switch">
+          <legend>Preview theme</legend>
+          <div class="ds-theme-switch__options">
+            <label class="ds-theme-switch__option">
+              <input class="ds-theme-switch__input" name="theme-choice" type="radio" value="console-light">
+              Light
+            </label>
+            <label class="ds-theme-switch__option">
+              <input class="ds-theme-switch__input" name="theme-choice" type="radio" value="console-dark" checked>
+              Dark
+            </label>
+            <label class="ds-theme-switch__option">
+              <input class="ds-theme-switch__input" name="theme-choice" type="radio" value="console-dimmed">
+              Dimmed
+            </label>
+            <label class="ds-theme-switch__option">
+              <input class="ds-theme-switch__input" name="theme-choice" type="radio" value="console-paper">
+              Paper
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="ds-theme-target">
+          <article class="ds-doc">
+            <header class="ds-doc__header">
+              <h1>Live Preview</h1>
+              <ul class="ds-meta">
+                <li>Interactive</li>
+                <li>CSS driven</li>
+              </ul>
+              <p class="ds-summary">The segmented control swaps the active theme without changing the document markup.</p>
+            </header>
+            <div class="ds-doc__body">
+              <h2>Status Brief</h2>
+              <p>Theme tokens update the page, document surface, callouts, code, and focus treatment.</p>
+              <pre><code>&lt;section class="ds-theme-target"&gt;</code></pre>
+              <div class="ds-callout ds-callout--info">
+                <p>Use the same component contract across all visual directions.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section>
         <h2>Style Directions</h2>
         <div class="ds-theme-grid">
@@ -84,16 +130,16 @@
               <header class="ds-doc__header">
                 <h1 id="theme-paper">Paper</h1>
                 <ul class="ds-meta">
-                  <li>Post-it</li>
-                  <li>Notes</li>
+                  <li>Wes homage</li>
+                  <li>/uses notes</li>
                 </ul>
-                <p class="ds-summary">Warm paper, compact edges, and sticky-note emphasis for decision notes.</p>
+                <p class="ds-summary">Hard black lines, loud yellow highlights, mono copy, and offset poster shadows.</p>
               </header>
               <div class="ds-doc__body">
                 <h2>Decision Memo</h2>
-                <p>Good for lightweight RFCs, meeting outcomes, and annotated implementation notes.</p>
+                <p>Good for personal gear notes, opinionated setup docs, and annotated implementation notes.</p>
                 <div class="ds-callout ds-callout--warning">
-                  <p>More expressive, best used for focused documents.</p>
+                  <p>Expressive on purpose; best used for focused pages with a human voice.</p>
                 </div>
               </div>
             </article>

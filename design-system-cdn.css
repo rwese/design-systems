@@ -36,7 +36,8 @@
 }
 
 .ds-theme--console,
-.ds-theme--console-dark {
+.ds-theme--console-dark,
+.ds-theme-stage:has(.ds-theme-switch__input[value="console-dark"]:checked) .ds-theme-target {
   color-scheme: dark;
   --ds-page: #111317;
   --ds-surface: #191d24;
@@ -59,7 +60,8 @@
   --ds-shadow: 0 22px 60px rgb(0 0 0 / 0.35);
 }
 
-.ds-theme--console-dimmed {
+.ds-theme--console-dimmed,
+.ds-theme-stage:has(.ds-theme-switch__input[value="console-dimmed"]:checked) .ds-theme-target {
   color-scheme: dark;
   --ds-page: #1b1d21;
   --ds-surface: #24272d;
@@ -82,28 +84,98 @@
   --ds-shadow: 0 20px 52px rgb(0 0 0 / 0.28);
 }
 
-.ds-theme--console-paper {
+.ds-theme--console-paper,
+.ds-theme-stage:has(.ds-theme-switch__input[value="console-paper"]:checked) .ds-theme-target {
   color-scheme: light;
-  --ds-page: #f0eadf;
-  --ds-surface: #fff8e8;
-  --ds-surface-muted: #fff1bf;
-  --ds-text: #2a2118;
-  --ds-text-muted: #6f604f;
-  --ds-border: #d8c79a;
-  --ds-border-strong: #9f8548;
-  --ds-link: #1d5f86;
-  --ds-link-visited: #6f4a91;
-  --ds-focus: #b45309;
-  --ds-info: #1d5f86;
-  --ds-info-bg: #e6f2f5;
-  --ds-warning: #9a5a00;
-  --ds-warning-bg: #ffe89b;
-  --ds-code: #332719;
-  --ds-code-bg: #f3df9d;
-  --ds-pre-bg: #2d271f;
-  --ds-pre-text: #fff5d6;
-  --ds-shadow: 0 18px 40px rgb(87 67 25 / 0.18);
-  --ds-radius: 4px;
+  --ds-page: #ffffff;
+  --ds-surface: #ffffff;
+  --ds-surface-muted: #fff4b8;
+  --ds-text: #000000;
+  --ds-text-muted: #193549;
+  --ds-border: #000000;
+  --ds-border-strong: #000000;
+  --ds-link: #193549;
+  --ds-link-visited: #193549;
+  --ds-focus: #ffc600;
+  --ds-info: #193549;
+  --ds-info-bg: #eef7ff;
+  --ds-warning: #000000;
+  --ds-warning-bg: #ffc600;
+  --ds-code: #000000;
+  --ds-code-bg: #fff0a3;
+  --ds-pre-bg: #193549;
+  --ds-pre-text: #fff9dc;
+  --ds-shadow: 5px 5px 0 #000000, 10px 10px 0 #ffc600;
+  --ds-radius: 0;
+  --ds-font-body: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", monospace;
+}
+
+.ds-theme--console-paper .ds-doc,
+.ds-theme-stage:has(.ds-theme-switch__input[value="console-paper"]:checked) .ds-theme-target .ds-doc {
+  background-image:
+    linear-gradient(135deg, rgb(255 198 0 / 0.08) 25%, transparent 25%),
+    linear-gradient(225deg, rgb(255 198 0 / 0.08) 25%, transparent 25%),
+    linear-gradient(45deg, rgb(0 0 0 / 0.035) 25%, transparent 25%),
+    linear-gradient(315deg, rgb(0 0 0 / 0.035) 25%, var(--ds-surface) 25%);
+  background-position: 10px 0, 10px 0, 0 0, 0 0;
+  background-size: 20px 20px;
+  border-width: 2px;
+}
+
+.ds-theme--console-paper h1,
+.ds-theme--console-paper h2,
+.ds-theme--console-paper h3,
+.ds-theme-stage:has(.ds-theme-switch__input[value="console-paper"]:checked) .ds-theme-target h1,
+.ds-theme-stage:has(.ds-theme-switch__input[value="console-paper"]:checked) .ds-theme-target h2,
+.ds-theme-stage:has(.ds-theme-switch__input[value="console-paper"]:checked) .ds-theme-target h3 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 400;
+}
+
+.ds-theme--console-paper h1,
+.ds-theme-stage:has(.ds-theme-switch__input[value="console-paper"]:checked) .ds-theme-target h1 {
+  display: inline;
+  padding: 0 0.15em;
+  background:
+    linear-gradient(rgb(255 255 255 / 0.38), rgb(255 255 255 / 0.38)),
+    #ffc600;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.ds-theme--console-paper h2,
+.ds-theme-stage:has(.ds-theme-switch__input[value="console-paper"]:checked) .ds-theme-target h2 {
+  border-top-width: 2px;
+  text-decoration: underline;
+  text-decoration-color: #ffc600;
+  text-decoration-thickness: 0.18em;
+  text-underline-offset: 0.08em;
+}
+
+.ds-theme--console-paper a,
+.ds-theme-stage:has(.ds-theme-switch__input[value="console-paper"]:checked) .ds-theme-target a {
+  text-decoration-color: #ffc600;
+  text-decoration-thickness: 0.16em;
+}
+
+.ds-theme--console-paper .ds-summary,
+.ds-theme--console-paper .ds-callout,
+.ds-theme--console-paper .ds-toc,
+.ds-theme--console-paper code,
+.ds-theme--console-paper kbd,
+.ds-theme--console-paper pre,
+.ds-theme-stage:has(.ds-theme-switch__input[value="console-paper"]:checked) .ds-theme-target .ds-summary,
+.ds-theme-stage:has(.ds-theme-switch__input[value="console-paper"]:checked) .ds-theme-target .ds-callout,
+.ds-theme-stage:has(.ds-theme-switch__input[value="console-paper"]:checked) .ds-theme-target .ds-toc,
+.ds-theme-stage:has(.ds-theme-switch__input[value="console-paper"]:checked) .ds-theme-target code,
+.ds-theme-stage:has(.ds-theme-switch__input[value="console-paper"]:checked) .ds-theme-target kbd,
+.ds-theme-stage:has(.ds-theme-switch__input[value="console-paper"]:checked) .ds-theme-target pre {
+  border-width: 2px;
+}
+
+.ds-theme--console-paper .ds-callout--warning,
+.ds-theme-stage:has(.ds-theme-switch__input[value="console-paper"]:checked) .ds-theme-target .ds-callout--warning {
+  border-left-color: #000000;
 }
 
 * {
@@ -374,6 +446,76 @@ th {
 .ds-callout--warning {
   border-left-color: var(--ds-warning);
   background: var(--ds-warning-bg);
+}
+
+.ds-theme-stage {
+  margin-top: 1.25rem;
+}
+
+.ds-theme-switch {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.ds-theme-switch legend {
+  margin-bottom: 0.75rem;
+  color: var(--ds-text-muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.ds-theme-switch__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ds-theme-switch__option {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.4rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius);
+  background: var(--ds-surface);
+  color: var(--ds-text);
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.ds-theme-switch__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.ds-theme-switch__option:has(.ds-theme-switch__input:checked) {
+  border-color: var(--ds-border-strong);
+  background: var(--ds-text);
+  color: var(--ds-surface);
+}
+
+.ds-theme-switch__option:has(.ds-theme-switch__input:focus-visible) {
+  outline: 3px solid var(--ds-focus);
+  outline-offset: 3px;
+}
+
+.ds-theme-target {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px dashed var(--ds-border);
+  border-radius: var(--ds-radius);
+  background: var(--ds-page);
+}
+
+.ds-theme-target .ds-doc {
+  width: 100%;
 }
 
 .ds-variants {
