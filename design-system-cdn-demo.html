@@ -3,39 +3,50 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Design System CDN Demo</title>
+  <title>Release Notes</title>
   <link rel="stylesheet" href="design-system-cdn.css">
 </head>
-<body>
-  <section class="ds-section" id="buttons">
-    <h2>Buttons</h2>
-    <button class="ds-button ds-button--primary">Primary</button>
-    <button class="ds-button ds-button--secondary">Secondary</button>
-    <button class="ds-button ds-button--danger">Delete</button>
-  </section>
+<body class="ds-page">
+  <article class="ds-doc">
+    <header class="ds-doc__header">
+      <h1>Release Notes</h1>
+      <ul class="ds-meta" aria-label="Document metadata">
+        <li>Version: 1.4</li>
+        <li>Updated: 2026-05-14</li>
+      </ul>
+      <p class="ds-summary">This release simplifies documentation pages for short, static reports that need to be readable in a browser and in print.</p>
+      <nav class="ds-toc" aria-labelledby="toc-title">
+        <h2 id="toc-title">Contents</h2>
+        <ol>
+          <li><a href="#changes">Changes</a></li>
+          <li><a href="#usage">Usage</a></li>
+        </ol>
+      </nav>
+    </header>
 
-  <section class="ds-section" id="forms">
-    <h2>Form elements</h2>
-    <div class="ds-field">
-      <label for="name">Name</label>
-      <input class="ds-field__control" id="name" type="text" placeholder="Enter your name">
-    </div>
+    <main class="ds-doc__body">
+      <section id="changes">
+        <h2>Changes</h2>
+        <p>The stylesheet now provides a document shell, readable typography, table of contents styling, callouts, code blocks, tables, mobile layout, and basic print support.</p>
+        <div class="ds-callout ds-callout--info">
+          <p>Use semantic HTML first. Add <code>ds-</code> classes only for page-level structure and callouts.</p>
+        </div>
+      </section>
 
-    <div class="ds-field ds-field--invalid">
-      <label for="email">Email</label>
-      <input class="ds-field__control" id="email" type="email" value="invalid-email" aria-invalid="true">
-    </div>
-  </section>
-
-  <section class="ds-section" id="media">
-    <h2>Images and media</h2>
-    <div class="ds-media-object">
-      <img src="https://placehold.co/72x72" alt="Avatar">
-      <div>
-        <h3>Project title</h3>
-        <p>Short supporting description for the project.</p>
-      </div>
-    </div>
-  </section>
+      <section id="usage">
+        <h2>Usage</h2>
+        <p>Link the CDN stylesheet and write one focused document per HTML file.</p>
+        <pre><code>&lt;link rel="stylesheet" href="https://cdn.example.com/design-system-cdn.css"&gt;</code></pre>
+        <ol>
+          <li>Use <code>body.ds-page</code> and <code>article.ds-doc</code>.</li>
+          <li>Keep the summary to one paragraph.</li>
+          <li>Use normal HTML for links, lists, and code.</li>
+        </ol>
+        <div class="ds-callout ds-callout--warning">
+          <p>Keep generated pages short. Move detailed references to a separate document.</p>
+        </div>
+      </section>
+    </main>
+  </article>
 </body>
 </html>
