@@ -17,6 +17,12 @@ Lean CSS for concise, handwritten single-page HTML documentation.
 
 ## Minimal page
 
+Use the stylesheet directly from GitHub:
+
+```html
+<link rel="stylesheet" href="https://raw.githubusercontent.com/rwese/design-systems/main/design-system-cdn.css">
+```
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +30,7 @@ Lean CSS for concise, handwritten single-page HTML documentation.
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Document title</title>
-  <link rel="stylesheet" href="https://cdn.example.com/design-system-cdn.css">
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/rwese/design-systems/main/design-system-cdn.css">
 </head>
 <body class="ds-page">
   <article class="ds-doc">
