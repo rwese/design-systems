@@ -1,0 +1,66 @@
+/* CDN-ready design system stylesheet */
+:root {
+  --ds-page: #f6f7f9;
+  --ds-surface: #ffffff;
+  --ds-text: #1f2933;
+  --ds-text-muted: #667085;
+  --ds-border: #d0d5dd;
+  --ds-primary: #2454ff;
+  --ds-danger: #d92d20;
+  --ds-font-body: system-ui, sans-serif;
+  --ds-radius-md: 8px;
+}
+html, body {
+  margin: 0;
+  font-family: var(--ds-font-body);
+  background: var(--ds-page);
+  color: var(--ds-text);
+}
+.ds-section {
+  margin: 3rem;
+}
+.ds-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--ds-radius-md);
+  border: 1px solid transparent;
+  font-weight: 600;
+}
+.ds-button--primary {
+  background: var(--ds-primary);
+  color: #fff;
+}
+.ds-button--secondary {
+  background: #fff;
+  border-color: var(--ds-border);
+}
+.ds-button--danger {
+  background: var(--ds-danger);
+  color: #fff;
+}
+.ds-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+.ds-field__control {
+  padding: 0.5rem;
+  border: 1px solid var(--ds-border);
+  border-radius: var(--ds-radius-md);
+}
+.ds-field--invalid .ds-field__control {
+  border-color: var(--ds-danger);
+}
+.ds-media-object {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.ds-media-object img {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--ds-radius-md);
+}
